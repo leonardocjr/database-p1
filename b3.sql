@@ -18,7 +18,7 @@ CREATE TABLE subsetor(
 
 # RN 03
 
-
+sdkgfjsdkgdsjgdskj
 
 # RN 04
 
