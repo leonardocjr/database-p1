@@ -68,7 +68,18 @@ CREATE TABLE indice (
 );
 
 # RN 09
-
+CREATE TABLE carteira (
+	indice_id VARCHAR(10) NOT NULL PRIMARY KEY,
+	CONSTRAINT fk_carteira_indice
+	FOREIGN KEY (indice_id) REFERENCES indice(indice_id),
+	acao_id VARCHAR(10) NOT NULL PRIMARY KEY,
+	CONSTRAINT fk_carteira_empresa
+	FOREIGN KEY (acao_id) REFERENCES acao(acao_id),
+	qtdd_acoes INT(100000000000) NOT NULL,
+	percentual_acoes DECIMAL(6,3) NOT NULL,
+	quadrimestre INT(1) NOT NULL PRIMARY KEY,
+	ano INT(4) NOT NULL PRIMARY KEY
+);
 
 # RN 10
 
