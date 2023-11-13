@@ -1,7 +1,7 @@
 # Trabalho prático 1 - Banco de dados
 Todos scripts e modelagem desenvolvidos na disciplina de **Banco de dados**.<br />
 **Orientador:**  Giovani Volnei Meinerz<br/>
-**Grupo:** [Eduardo Meste](https://github.com/eemestre), [Julia Beiroco](https://github.com/), [Leonardo Canuto Junior](https://github.com/leonardocjr), [Lucas de Souza Pelegrina](https://github.com/LsPelegrina), [Vitor Menck](https://github.com/Vgmenck), [Victor Ehiti](https://github.com/victortamay)
+**Grupo:** [Eduardo Meste](https://github.com/eemestre), [Julia Beiroco](https://github.com/), [Leonardo Canuto Junior](https://github.com/leonardocjr), [Lucas de Souza Pelegrina](https://github.com/LsPelegrina), [Vitor Menck](https://github.com/Vgmenck), [Victor Ehiti](https://github.com/victortamay)<br />
 **Instituição de Ensino:** [UTFPR](https://portal.utfpr.edu.br/home)
 
 # Enunciado do trabalho prático 1
