@@ -53,10 +53,19 @@ CREATE TABLE acao (
 )
 
 # RN 07
-
+CREATE TABLE tipo_indice (
+	tipo_id VARCHAR(10) NOT NULL PRIMARY KEY,
+	tipo_nome VARCHAR(100) NOT NULL
+);
 
 # RN 08
-
+CREATE TABLE indice (
+	indice_id VARCHAR(10) NOT NULL PRIMARY KEY,
+	indice_nome VARCHAR(100) NOT NULL,
+	tipo_id VARCHAR(10) NOT NULL,
+	CONSTRAINT fk_indice_tipo_indice
+	FOREIGN KEY (tipo_id) REFERENCES tipo_indice(tipo_id)
+);
 
 # RN 09
 
