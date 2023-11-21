@@ -1,11 +1,6 @@
-SELECT c.cot_data AS 'Data do Pregão', 
-       a.acao_id AS 'Código da Ação', 
-       c.cot_pfechamento AS 'Preço de Fechamento', 
-       i.ind_id AS 'Sigla do Índice', 
-       l.list_percentual AS 'Percentual no Índice'
-FROM b3.cotacao c
-JOIN b3.acao a ON c.acao_id = a.acao_id
-JOIN b3.listagem l ON a.acao_id = l.acao_id
-JOIN b3.indice i ON l.ind_id = i.ind_id
-WHERE i.ind_nome = 'Índice Brasil Amplo' AND l.list_percentual BETWEEN 1 AND 2
-ORDER BY c.cot_data DESC;
+SELECT e.emp_id AS 'Código da Empresa', e.emp_nome AS 'Nome de Pregão da Empresa', COUNT(a.acao_id) AS 'Quantidade de Ações'
+FROM b3.empresa e
+JOIN b3.acao a ON e.emp_id = a.emp_id
+GROUP BY e.emp_id, e.emp_nome
+HAVING COUNT(a.acao_id) > 4
+ORDER BY COUNT(a.acao_id) DESC;
