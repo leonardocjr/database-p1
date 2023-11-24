@@ -1,4 +1,8 @@
-SELECT listagem.ind_id, indice.ind_nome, listagem.acao_id, MAX(listagem.list_percentual) AS "Percentual da maior acao"
-FROM listagem, indice, empresa, acao
-WHERE listagem.ind_id = indice.ind_id AND empresa.emp_id = acao.emp_id AND acao.acao_id = listagem.acao_id
-GROUP BY empresa.emp_id ORDER BY MAX(listagem.list_percentual) DESC
+SELECT i.ind_id AS 'Sigla do Índice', 
+       i.ind_nome AS 'Nome do Índice', 
+       l.acao_id AS 'Código da Ação', 
+       MAX(l.list_percentual) AS 'Percentual'
+FROM b3.listagem l
+JOIN b3.indice i ON l.ind_id = i.ind_id
+GROUP BY i.ind_id, i.ind_nome, l.acao_id
+ORDER BY MAX(l.list_percentual) DESC;
